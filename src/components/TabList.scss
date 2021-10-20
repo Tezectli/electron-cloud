@@ -2,15 +2,22 @@
     .close-icon {
         visibility: hidden;
     }
+    .nav-link {
+        color: #5c5d5f;
+    }
+    .nav-link.active {
+        background: #717f8e;
+    }
     .nav-link:hover .close-icon {
         visibility: visible;
     }
     .nav-link.active .close-icon {
         visibility: visible;
+        // background-color: #3570af;
     }
     .unsaved-icon {
         display: inline-block;
-        background: rgb(209, 241, 247);
+        background: rgb(212, 212, 212);
         width: 11px;
         height: 11px;
     }
@@ -23,4 +30,5 @@
     .withUnsaved.nav-link:hover .unsaved-icon {
         display: none;
     }
+
 }

@@ -172,6 +172,7 @@ function App() {
         saveFilesToStore(newFiles);
       });
     }
+    console.log("触发了！");
   };
   const fileSearch = (keyword) => {
     //过滤器来寻找所需文件

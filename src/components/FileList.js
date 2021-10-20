@@ -19,7 +19,10 @@ const FileList = ({ files, onFileClick, onSaveEdit, onFileDelete }) => {
     setValue("");
     //如果正在修改新建的文件时
     if (editItem.isNew) {
-      onFileDelete(editItem.id);
+      // onSaveEdit(editItem.id, value, editItem.isNew);
+      editItem.isNew = false
+      // onFileDelete(editItem);
+      
     }
   };
   const clickItem = usecontextMenu(
@@ -138,7 +141,7 @@ const FileList = ({ files, onFileClick, onSaveEdit, onFileDelete }) => {
           data-id={file.id}
           data-title={file.title}
         >
-          {file.id !== editStatus && !file.isNew && (
+          {file.id !== editStatus && !file.isNew &&file.title!==""&& (
             <>
               <span className="col-2">
                 <FontAwesomeIcon icon={faMarkdown} title="文档" />
